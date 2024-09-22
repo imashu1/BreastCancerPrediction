@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='popup.css') }}">
+</head>
+<body>
+    <div class="popup">
+        <div class="popup-content">
+            <h1>Breast Cancer Prediction Result</h1>
+            <div class="prediction">
+                <h3>{{prediction_text}}<h3/>
+                <h2>{{prediction_text_second}}<h2/>
+            <div/>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to close the popup
+        function closePopup() {
+            window.location.replace(document.referrer);
+        }
+ 
+    </script>
+</body>
+</html>
